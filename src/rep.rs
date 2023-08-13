@@ -317,6 +317,8 @@ pub struct VersionUpdateBody {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct User {
+    #[serde(rename = "accountId")]
+    pub account_id: String,
     pub active: bool,
     #[serde(rename = "avatarUrls")]
     pub avatar_urls: Option<BTreeMap<String, String>>,
